@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="7549" systemVersion="14D136" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="Hobby" representedClassName="Hobby" syncable="YES">
+        <attribute name="hobbyName" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="userofhobby" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="User" inverseName="hobbiesofuser" inverseEntity="User" syncable="YES"/>
+    </entity>
+    <entity name="Migration" representedClassName="Migration" syncable="YES">
+        <attribute name="teststring" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="Type" representedClassName="Type" syncable="YES">
+        <attribute name="typeName" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="usersoftype" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="User" inverseName="typeofuser" inverseEntity="User" syncable="YES"/>
+    </entity>
+    <entity name="User" representedClassName="User" syncable="YES">
+        <attribute name="displayOrder" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="userBirthDate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="userName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="userPhone" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <relationship name="hobbiesofuser" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Hobby" inverseName="userofhobby" inverseEntity="Hobby" syncable="YES"/>
+        <relationship name="typeofuser" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Type" inverseName="usersoftype" inverseEntity="Type" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Hobby" positionX="-18" positionY="63" width="128" height="73"/>
+        <element name="Type" positionX="-18" positionY="54" width="128" height="73"/>
+        <element name="User" positionX="-45" positionY="0" width="128" height="135"/>
+        <element name="Migration" positionX="-27" positionY="54" width="128" height="60"/>
+    </elements>
+</model>
