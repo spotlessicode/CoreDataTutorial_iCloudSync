@@ -1,11 +1,3 @@
-//
-//  AppDelegate.m
-//  CoreDataTutorial
-//
-//  Created by Eva Puskas on 2014. 11. 16..
-//  Copyright (c) 2014. Pepzen Ltd. All rights reserved.
-//
-
 #import "AppDelegate.h"
 
 @interface AppDelegate ()
@@ -21,30 +13,35 @@ NSString *iCloudStoreFilename = @"iCloud.sqlite";
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     [self iCloudAccountIsSignedIn];
-
+    
     return YES;
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {
+    NSLog(@"Running %@ '%@'", self.class, NSStringFromSelector(_cmd));
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
     // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
 }
 
 - (void)applicationDidEnterBackground:(UIApplication *)application {
+    NSLog(@"Running %@ '%@'", self.class, NSStringFromSelector(_cmd));
     // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
     // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
 }
 
 - (void)applicationWillEnterForeground:(UIApplication *)application {
+    NSLog(@"Running %@ '%@'", self.class, NSStringFromSelector(_cmd));
     // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
 }
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {
+    NSLog(@"Running %@ '%@'", self.class, NSStringFromSelector(_cmd));
     // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
     [self setupCoreData];
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application {
+    NSLog(@"Running %@ '%@'", self.class, NSStringFromSelector(_cmd));
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     // Saves changes in the application's managed object context before the application terminates.
     [self saveContext];
@@ -92,25 +89,25 @@ NSString *iCloudStoreFilename = @"iCloud.sqlite";
 }
 
 - (id)init {
-
+    
     self = [super init];
     if (!self) {return nil;}
-
+    
     NSURL *modelURL = [[NSBundle mainBundle] URLForResource:@"CoreDataTutorial" withExtension:@"momd"];
     _managedObjectModel = [[NSManagedObjectModel alloc] initWithContentsOfURL:modelURL];
+    
     _persistentStoreCoordinator = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:_managedObjectModel];
     
     _managedObjectContext = [[NSManagedObjectContext alloc] initWithConcurrencyType:NSMainQueueConcurrencyType];
     [_managedObjectContext setMergePolicy:NSMergeByPropertyObjectTrumpMergePolicy];
-    
+
     [self listenForStoreChanges];
     
-
     return self;
 }
 
 - (void)setupCoreData {
- 
+    
     if (self.iCloudAccountIsSignedIn == YES) {
         
         NSLog(@"----Load the iCloud Store----");
@@ -124,7 +121,7 @@ NSString *iCloudStoreFilename = @"iCloud.sqlite";
         
         [self loadStore];
     }
-
+    
 }
 
 - (void)loadStore {
@@ -135,10 +132,10 @@ NSString *iCloudStoreFilename = @"iCloud.sqlite";
     if (useMigrationManager && [self isMigrationNecessaryForStore:[self storeURL]]) {
         
         [self performBackgroundManagedMigrationForStore:[self storeURL]];
-    
+        
     } else {
         NSDictionary *options =@{ NSMigratePersistentStoresAutomaticallyOption:@YES,NSInferMappingModelAutomaticallyOption:@YES
-          //,NSSQLitePragmasOption: @{@"journal_mode": @"DELETE"} // Uncomment to disable WAL journal mode
+                                  //,NSSQLitePragmasOption: @{@"journal_mode": @"DELETE"} // Uncomment to disable WAL journal mode
                                   };
         NSError *error = nil;
         _store = [_persistentStoreCoordinator addPersistentStoreWithType:NSSQLiteStoreType
@@ -156,6 +153,7 @@ NSString *iCloudStoreFilename = @"iCloud.sqlite";
     }
     
 }
+
 #pragma mark - Core Data Migration Support
 
 //check if migration needs
@@ -191,7 +189,7 @@ NSString *iCloudStoreFilename = @"iCloud.sqlite";
     
     
     // Perform migration in the background.
-
+    
     dispatch_async(
                    dispatch_get_global_queue(
                                              DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), ^{
@@ -213,7 +211,7 @@ NSString *iCloudStoreFilename = @"iCloud.sqlite";
                                else {
                                    NSLog(@"Successfully added a migrated store: %@",
                                          _store);}
-
+                               
                            });
                        }
                    });
@@ -277,7 +275,7 @@ NSString *iCloudStoreFilename = @"iCloud.sqlite";
         }
     }
     else {
-       
+        
         NSLog(@"FAILED MIGRATION: Mapping Model is null");
     }
     
@@ -304,15 +302,17 @@ NSString *iCloudStoreFilename = @"iCloud.sqlite";
     else {
         
         NSLog(@"FAILED to remove old store %@: Error:%@", old, Error);
-    
+        
     }
     return success;
 }
 
-
 #pragma mark - Core Data Saving support
 
 - (void)saveContext {
+    
+    NSLog(@"Running %@ '%@'", self.class, NSStringFromSelector(_cmd));
+    
     NSManagedObjectContext *managedObjectContext = self.managedObjectContext;
     if (managedObjectContext != nil) {
         NSError *error = nil;
@@ -325,10 +325,9 @@ NSString *iCloudStoreFilename = @"iCloud.sqlite";
     }
 }
 
-
 -(NSArray*)getAllUserRecords{
     
-    
+    NSLog(@"Running %@ '%@'", self.class, NSStringFromSelector(_cmd));
     
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc]init];
     
@@ -351,19 +350,22 @@ NSString *iCloudStoreFilename = @"iCloud.sqlite";
 }
 
 #pragma mark - iCloud
+
 - (BOOL)iCloudAccountIsSignedIn {
     
     NSLog(@"Running %@ '%@'", self.class, NSStringFromSelector(_cmd));
     
     id token = [[NSFileManager defaultManager] ubiquityIdentityToken];
+    
     if (token) {
         NSLog(@"----iCloud is Logged In with token '%@' ----", token);
         return YES;
     }
+    
     NSLog(@"---- iCloud is NOT Logged In ----");
     NSLog(@"Check these: Is iCloud Documents and Data enabled??? (Mac, IOS Device)--- iCloud Capability -App Target, ---- Code Sign Entitlements Error??");
     
-    return NO;
+    return NO; 
 }
 
 - (BOOL)loadiCloudStore {
@@ -375,15 +377,15 @@ NSString *iCloudStoreFilename = @"iCloud.sqlite";
     NSDictionary *options = @{
                               NSMigratePersistentStoresAutomaticallyOption:@YES,
                               NSInferMappingModelAutomaticallyOption:@NO,
-                              NSPersistentStoreUbiquitousContentNameKey:@"Purp",
+                              NSPersistentStoreUbiquitousContentNameKey:@"CoreDataTutorial",
                               //,NSPersistentStoreUbiquitousContentURLKey:@"ChangeLogs" // Optional since iOS7
                               };
     NSError *error;
     _iCloudStore = [_persistentStoreCoordinator addPersistentStoreWithType:NSSQLiteStoreType
-                                              configuration:nil
-                                                        URL:[self iCloudStoreURL]
-                                                    options:options
-                                                      error:&error];
+                                                             configuration:nil
+                                                                       URL:[self iCloudStoreURL]
+                                                                   options:options
+                                                                     error:&error];
     if (_iCloudStore) {
         NSLog(@"** The iCloud Store has been successfully configured at '%@' **", _iCloudStore.URL.path);
         return YES;
@@ -396,7 +398,7 @@ NSString *iCloudStoreFilename = @"iCloud.sqlite";
 - (void)listenForStoreChanges {
     
     //indicate that the store is about to change
-
+    
     NSNotificationCenter *dc = [NSNotificationCenter defaultCenter];
     [dc addObserver:self
            selector:@selector(storesWillChange:)
@@ -415,11 +417,11 @@ NSString *iCloudStoreFilename = @"iCloud.sqlite";
 - (void)storesWillChange:(NSNotification *)n {
     
     //react to the store change notifications
-
+    
     [_managedObjectContext performBlockAndWait:^{
         [_managedObjectContext save:nil];
         [self resetContext:_managedObjectContext]; }];
-
+    
     // Refresh UI
     [[NSNotificationCenter defaultCenter] postNotificationName:@"SomethingChanged"
                                                         object:nil
@@ -468,5 +470,6 @@ NSString *iCloudStoreFilename = @"iCloud.sqlite";
     if (_store) {success = YES;}
     return success;
 }
+
 
 @end
