@@ -8,15 +8,19 @@
 
 /* Begin PBXBuildFile section */
 		D417F5741B09E7FE00F77FD4 /* CoreDataTutorial.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D417F5701B09E7FE00F77FD4 /* CoreDataTutorial.xcdatamodeld */; };
-		D417F5771B09E85000F77FD4 /* MappingHobby.m in Sources */ = {isa = PBXBuildFile; fileRef = D417F5761B09E85000F77FD4 /* MappingHobby.m */; };
-		D417F57A1B09E85100F77FD4 /* Migration.m in Sources */ = {isa = PBXBuildFile; fileRef = D417F5791B09E85100F77FD4 /* Migration.m */; };
-		D417F57E1B09EC6F00F77FD4 /* Migration2.m in Sources */ = {isa = PBXBuildFile; fileRef = D417F57D1B09EC6F00F77FD4 /* Migration2.m */; };
-		D417F5821B09ED1700F77FD4 /* MappingHobby2.m in Sources */ = {isa = PBXBuildFile; fileRef = D417F5811B09ED1700F77FD4 /* MappingHobby2.m */; };
 		D417F5841B09ED2E00F77FD4 /* Model4to5.xcmappingmodel in Sources */ = {isa = PBXBuildFile; fileRef = D417F5831B09ED2E00F77FD4 /* Model4to5.xcmappingmodel */; };
-		D41F97971A27776000559896 /* Type.m in Sources */ = {isa = PBXBuildFile; fileRef = D41F97961A27776000559896 /* Type.m */; };
-		D41F97981A27776000559896 /* Type.m in Sources */ = {isa = PBXBuildFile; fileRef = D41F97961A27776000559896 /* Type.m */; };
-		D41F979B1A27776000559896 /* Hobby.m in Sources */ = {isa = PBXBuildFile; fileRef = D41F979A1A27776000559896 /* Hobby.m */; };
-		D41F979C1A27776000559896 /* Hobby.m in Sources */ = {isa = PBXBuildFile; fileRef = D41F979A1A27776000559896 /* Hobby.m */; };
+		D427334A1CD22379000E7669 /* Hobby.m in Sources */ = {isa = PBXBuildFile; fileRef = D427333F1CD22379000E7669 /* Hobby.m */; };
+		D427334B1CD22379000E7669 /* Hobby.m in Sources */ = {isa = PBXBuildFile; fileRef = D427333F1CD22379000E7669 /* Hobby.m */; };
+		D427334C1CD22379000E7669 /* MappingHobby.m in Sources */ = {isa = PBXBuildFile; fileRef = D42733411CD22379000E7669 /* MappingHobby.m */; };
+		D427334D1CD22379000E7669 /* MappingHobby.m in Sources */ = {isa = PBXBuildFile; fileRef = D42733411CD22379000E7669 /* MappingHobby.m */; };
+		D427334E1CD22379000E7669 /* MappingHobby2.m in Sources */ = {isa = PBXBuildFile; fileRef = D42733431CD22379000E7669 /* MappingHobby2.m */; };
+		D427334F1CD22379000E7669 /* MappingHobby2.m in Sources */ = {isa = PBXBuildFile; fileRef = D42733431CD22379000E7669 /* MappingHobby2.m */; };
+		D42733501CD22379000E7669 /* Migration.m in Sources */ = {isa = PBXBuildFile; fileRef = D42733451CD22379000E7669 /* Migration.m */; };
+		D42733511CD22379000E7669 /* Migration.m in Sources */ = {isa = PBXBuildFile; fileRef = D42733451CD22379000E7669 /* Migration.m */; };
+		D42733521CD22379000E7669 /* Migration2.m in Sources */ = {isa = PBXBuildFile; fileRef = D42733471CD22379000E7669 /* Migration2.m */; };
+		D42733531CD22379000E7669 /* Migration2.m in Sources */ = {isa = PBXBuildFile; fileRef = D42733471CD22379000E7669 /* Migration2.m */; };
+		D42733541CD22379000E7669 /* Type.m in Sources */ = {isa = PBXBuildFile; fileRef = D42733491CD22379000E7669 /* Type.m */; };
+		D42733551CD22379000E7669 /* Type.m in Sources */ = {isa = PBXBuildFile; fileRef = D42733491CD22379000E7669 /* Type.m */; };
 		D42AADA11A1953AB002A23EF /* MyTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D42AADA01A1953AB002A23EF /* MyTableViewController.m */; };
 		D42AADA21A1953AB002A23EF /* MyTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D42AADA01A1953AB002A23EF /* MyTableViewController.m */; };
 		D43777691A41D456001CA11E /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = D43777681A41D456001CA11E /* User.m */; };
@@ -44,21 +48,21 @@
 		D417F5711B09E7FE00F77FD4 /* CoreDataTutorial 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "CoreDataTutorial 2.xcdatamodel"; sourceTree = "<group>"; };
 		D417F5721B09E7FE00F77FD4 /* CoreDataTutorial 3.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "CoreDataTutorial 3.xcdatamodel"; sourceTree = "<group>"; };
 		D417F5731B09E7FE00F77FD4 /* CoreDataTutorial.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreDataTutorial.xcdatamodel; sourceTree = "<group>"; };
-		D417F5751B09E85000F77FD4 /* MappingHobby.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MappingHobby.h; path = ../MappingHobby.h; sourceTree = "<group>"; };
-		D417F5761B09E85000F77FD4 /* MappingHobby.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MappingHobby.m; path = ../MappingHobby.m; sourceTree = "<group>"; };
-		D417F5781B09E85100F77FD4 /* Migration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Migration.h; path = ../Migration.h; sourceTree = "<group>"; };
-		D417F5791B09E85100F77FD4 /* Migration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Migration.m; path = ../Migration.m; sourceTree = "<group>"; };
 		D417F57B1B09EC3700F77FD4 /* CoreDataTutorial 4.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "CoreDataTutorial 4.xcdatamodel"; sourceTree = "<group>"; };
-		D417F57C1B09EC6F00F77FD4 /* Migration2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Migration2.h; path = ../Migration2.h; sourceTree = "<group>"; };
-		D417F57D1B09EC6F00F77FD4 /* Migration2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Migration2.m; path = ../Migration2.m; sourceTree = "<group>"; };
 		D417F57F1B09ECDB00F77FD4 /* CoreDataTutorial 5.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "CoreDataTutorial 5.xcdatamodel"; sourceTree = "<group>"; };
-		D417F5801B09ED1700F77FD4 /* MappingHobby2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MappingHobby2.h; path = ../MappingHobby2.h; sourceTree = "<group>"; };
-		D417F5811B09ED1700F77FD4 /* MappingHobby2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MappingHobby2.m; path = ../MappingHobby2.m; sourceTree = "<group>"; };
 		D417F5831B09ED2E00F77FD4 /* Model4to5.xcmappingmodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcmappingmodel; path = Model4to5.xcmappingmodel; sourceTree = "<group>"; };
-		D41F97951A27776000559896 /* Type.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Type.h; path = ../Type.h; sourceTree = "<group>"; };
-		D41F97961A27776000559896 /* Type.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Type.m; path = ../Type.m; sourceTree = "<group>"; };
-		D41F97991A27776000559896 /* Hobby.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Hobby.h; path = ../Hobby.h; sourceTree = "<group>"; };
-		D41F979A1A27776000559896 /* Hobby.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Hobby.m; path = ../Hobby.m; sourceTree = "<group>"; };
+		D427333E1CD22379000E7669 /* Hobby.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Hobby.h; sourceTree = "<group>"; };
+		D427333F1CD22379000E7669 /* Hobby.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Hobby.m; sourceTree = "<group>"; };
+		D42733401CD22379000E7669 /* MappingHobby.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MappingHobby.h; sourceTree = "<group>"; };
+		D42733411CD22379000E7669 /* MappingHobby.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MappingHobby.m; sourceTree = "<group>"; };
+		D42733421CD22379000E7669 /* MappingHobby2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MappingHobby2.h; sourceTree = "<group>"; };
+		D42733431CD22379000E7669 /* MappingHobby2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MappingHobby2.m; sourceTree = "<group>"; };
+		D42733441CD22379000E7669 /* Migration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Migration.h; sourceTree = "<group>"; };
+		D42733451CD22379000E7669 /* Migration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Migration.m; sourceTree = "<group>"; };
+		D42733461CD22379000E7669 /* Migration2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Migration2.h; sourceTree = "<group>"; };
+		D42733471CD22379000E7669 /* Migration2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Migration2.m; sourceTree = "<group>"; };
+		D42733481CD22379000E7669 /* Type.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Type.h; sourceTree = "<group>"; };
+		D42733491CD22379000E7669 /* Type.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Type.m; sourceTree = "<group>"; };
 		D42AAD9F1A1953AB002A23EF /* MyTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyTableViewController.h; sourceTree = "<group>"; };
 		D42AADA01A1953AB002A23EF /* MyTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyTableViewController.m; sourceTree = "<group>"; };
 		D43777671A41D456001CA11E /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
@@ -163,22 +167,22 @@
 		D47A19B81A18BCD700F7E580 /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
-				D417F5801B09ED1700F77FD4 /* MappingHobby2.h */,
-				D417F5811B09ED1700F77FD4 /* MappingHobby2.m */,
-				D417F57C1B09EC6F00F77FD4 /* Migration2.h */,
-				D417F57D1B09EC6F00F77FD4 /* Migration2.m */,
+				D427333E1CD22379000E7669 /* Hobby.h */,
+				D427333F1CD22379000E7669 /* Hobby.m */,
+				D42733401CD22379000E7669 /* MappingHobby.h */,
+				D42733411CD22379000E7669 /* MappingHobby.m */,
+				D42733421CD22379000E7669 /* MappingHobby2.h */,
+				D42733431CD22379000E7669 /* MappingHobby2.m */,
+				D42733441CD22379000E7669 /* Migration.h */,
+				D42733451CD22379000E7669 /* Migration.m */,
+				D42733461CD22379000E7669 /* Migration2.h */,
+				D42733471CD22379000E7669 /* Migration2.m */,
+				D42733481CD22379000E7669 /* Type.h */,
+				D42733491CD22379000E7669 /* Type.m */,
 				D43777671A41D456001CA11E /* User.h */,
 				D43777681A41D456001CA11E /* User.m */,
-				D41F97991A27776000559896 /* Hobby.h */,
-				D41F979A1A27776000559896 /* Hobby.m */,
-				D41F97951A27776000559896 /* Type.h */,
-				D41F97961A27776000559896 /* Type.m */,
 				D417F5701B09E7FE00F77FD4 /* CoreDataTutorial.xcdatamodeld */,
 				D417F5831B09ED2E00F77FD4 /* Model4to5.xcmappingmodel */,
-				D417F5781B09E85100F77FD4 /* Migration.h */,
-				D417F5791B09E85100F77FD4 /* Migration.m */,
-				D417F5751B09E85000F77FD4 /* MappingHobby.h */,
-				D417F5761B09E85000F77FD4 /* MappingHobby.m */,
 			);
 			name = CoreData;
 			sourceTree = "<group>";
@@ -290,18 +294,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				D417F5841B09ED2E00F77FD4 /* Model4to5.xcmappingmodel in Sources */,
-				D417F5821B09ED1700F77FD4 /* MappingHobby2.m in Sources */,
+				D427334A1CD22379000E7669 /* Hobby.m in Sources */,
 				D43777691A41D456001CA11E /* User.m in Sources */,
 				D47A198D1A18BC6E00F7E580 /* AppDelegate.m in Sources */,
-				D417F57A1B09E85100F77FD4 /* Migration.m in Sources */,
-				D417F5771B09E85000F77FD4 /* MappingHobby.m in Sources */,
+				D42733501CD22379000E7669 /* Migration.m in Sources */,
+				D427334C1CD22379000E7669 /* MappingHobby.m in Sources */,
 				D47A198A1A18BC6E00F7E580 /* main.m in Sources */,
 				D42AADA11A1953AB002A23EF /* MyTableViewController.m in Sources */,
-				D417F57E1B09EC6F00F77FD4 /* Migration2.m in Sources */,
+				D42733521CD22379000E7669 /* Migration2.m in Sources */,
 				D417F5741B09E7FE00F77FD4 /* CoreDataTutorial.xcdatamodeld in Sources */,
+				D427334E1CD22379000E7669 /* MappingHobby2.m in Sources */,
 				D47A19931A18BC6E00F7E580 /* ViewController.m in Sources */,
-				D41F97971A27776000559896 /* Type.m in Sources */,
-				D41F979B1A27776000559896 /* Hobby.m in Sources */,
+				D42733541CD22379000E7669 /* Type.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -309,11 +313,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D42733511CD22379000E7669 /* Migration.m in Sources */,
+				D427334B1CD22379000E7669 /* Hobby.m in Sources */,
 				D437776A1A41D456001CA11E /* User.m in Sources */,
+				D42733531CD22379000E7669 /* Migration2.m in Sources */,
 				D47A19A71A18BC6E00F7E580 /* CoreDataTutorialTests.m in Sources */,
+				D427334D1CD22379000E7669 /* MappingHobby.m in Sources */,
+				D427334F1CD22379000E7669 /* MappingHobby2.m in Sources */,
 				D42AADA21A1953AB002A23EF /* MyTableViewController.m in Sources */,
-				D41F979C1A27776000559896 /* Hobby.m in Sources */,
-				D41F97981A27776000559896 /* Type.m in Sources */,
+				D42733551CD22379000E7669 /* Type.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -434,7 +442,7 @@
 				INFOPLIST_FILE = CoreDataTutorial/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = pepzen.CoreDataTutorialiCloud;
+				PRODUCT_BUNDLE_IDENTIFIER = pepzen.CoreDataTutorialiCloudz;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
@@ -450,7 +458,7 @@
 				INFOPLIST_FILE = CoreDataTutorial/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = pepzen.CoreDataTutorialiCloud;
+				PRODUCT_BUNDLE_IDENTIFIER = pepzen.CoreDataTutorialiCloudz;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};

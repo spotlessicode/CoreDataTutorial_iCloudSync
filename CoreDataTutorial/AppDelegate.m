@@ -100,6 +100,7 @@ NSString *iCloudStoreFilename = @"iCloud.sqlite";
     
     _managedObjectContext = [[NSManagedObjectContext alloc] initWithConcurrencyType:NSMainQueueConcurrencyType];
     [_managedObjectContext setMergePolicy:NSMergeByPropertyObjectTrumpMergePolicy];
+    [_managedObjectContext setPersistentStoreCoordinator:_persistentStoreCoordinator];
 
     [self listenForStoreChanges];
     
@@ -376,7 +377,7 @@ NSString *iCloudStoreFilename = @"iCloud.sqlite";
     
     NSDictionary *options = @{
                               NSMigratePersistentStoresAutomaticallyOption:@YES,
-                              NSInferMappingModelAutomaticallyOption:@NO,
+                              NSInferMappingModelAutomaticallyOption:@YES,
                               NSPersistentStoreUbiquitousContentNameKey:@"CoreDataTutorial",
                               //,NSPersistentStoreUbiquitousContentURLKey:@"ChangeLogs" // Optional since iOS7
                               };
